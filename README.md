@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 AI HireSync
 
-## Getting Started
+**AI-Powered Remote Interview Platform**
 
-First, run the development server:
+AI HireSync is a modern, high-performance remote interview platform designed to streamline the technical hiring process. It combines real-time video communication with AI-powered question generation and a collaborative coding environment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![HireSync Header](https://source.unsplash.com/featured/?technology,interview)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Core Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🏢 Role-Based Dashboards
+- **Interviewers**: Comprehensive dashboard to schedule interviews, manage sessions, and generate AI questions.
+- **Candidates**: Professional portal to access upcoming invitations, join meetings, and view past recordings.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧠 AI Question Generator
+- Leveraging **Google Gemini** & **Llama 3.3 (via Groq)**.
+- Generate high-quality technical, behavioral, and problem-solving questions based on role and difficulty level.
+- Seamlessly integrate generated questions into the interview description or side panel.
 
-## Learn More
+### 🎥 Professional Interview Room (Powered by Stream.io)
+- **High-Quality Video/Audio**: Real-time communication with optimized latency.
+- **Dual Layouts**: Switch between Grid and Speaker views.
+- **AI Questions Side-Panel**: Access generated questions directly within the call without switching tabs.
+- **Participant Management**: Easily see who's in the room.
 
-To learn more about Next.js, take a look at the following resources:
+### 💻 Collaborative Code Editor
+- **Multi-Language Support**: JavaScript, Python, Java.
+- **Interactive Coding**: Real-time code execution and results (Coming Soon).
+- **Resizable Layout**: Dynamically adjust the video and editor workspace size.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Database**: [Convex](https://www.convex.dev/) (Real-time backend)
+- **Authentication**: [Clerk](https://clerk.com/)
+- **Video/Audio**: [Stream Video SDK](https://getstream.io/)
+- **AI**: [Google Generative AI](https://ai.google.dev/) & [Groq Cloud](https://groq.com/)
+- **UI/UX**: [Tailwind CSS](https://tailwindcss.com/), [Shadcn UI](https://ui.shadcn.com/), [Lucide React](https://lucide.dev/)
 
-## Deploy on Vercel
+## 🚀 Getting Started
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Prerequisites
+- Node.js 18+ 
+- Convex Account
+- Stream IO Account
+- Clerk Account
+- Google AI / Groq API Keys
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/debojeetmitra/AI-HireSync-ByDebojeet.git
+   cd AI-HireSync-ByDebojeet
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root directory:
+   ```env
+   # Clerk
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+   CLERK_SECRET_KEY=
+
+   # Convex
+   CONVEX_DEPLOYMENT=
+   NEXT_PUBLIC_CONVEX_URL=
+
+   # Stream
+   NEXT_PUBLIC_STREAM_API_KEY=
+   STREAM_SECRET_KEY=
+
+   # AI Keys
+   GEMINI_API_KEY=
+   GROQ_API_KEY=
+   ```
+
+4. **Run Convex Dev:**
+   ```bash
+   npx convex dev
+   ```
+
+5. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
+
+## 🤝 Credit
+
+Made with ❤️ by [Debojeet Mitra](https://github.com/debojeetmitra)
+
+---
+*Transforming the technical interview experience with AI.*
